@@ -5,7 +5,11 @@ const Header = ({ text, bgColor, textColor }) => {
     backgroundColor: bgColor,
     color: textColor,
   };
-  return <header style={headerStyles}>{text}</header>;
+  return (
+    <header style={headerStyles}>
+      <h1>{text}</h1>
+    </header>
+  );
 };
 
 Header.defaultProps = {
