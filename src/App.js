@@ -5,6 +5,15 @@ import FeedbackData from "./data/Feedback";
 import FeedbackStats from "./components/FeedbackStats";
 import FeedbackForm from "./components/FeedbackForm";
 import { v4 as uuidv4 } from "uuid";
+import AboutIconLink from "./components/AboutIconLink";
+import About from "./pages/About";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  NavLink,
+} from "react-router-dom";
+import Card from "./components/shared/Card";
 
 const App = () => {
   const [feedback, setFeedback] = useState(FeedbackData);
@@ -21,14 +30,36 @@ const App = () => {
   };
 
   return (
-    <>
+    <Router>
       <Header />
       <div className="container">
-        <FeedbackForm handleAdd={addFeedback} />
-        <FeedbackStats feedback={feedback} />
-        <FeedbackList feedback={feedback} handleDelete={deleteFeedback} />
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <>
+                <FeedbackForm handleAdd={addFeedback} />
+                <FeedbackStats feedback={feedback} />
+                <FeedbackList
+                  feedback={feedback}
+                  handleDelete={deleteFeedback}
+                />
+              </>
+            }
+          />
+          <Route path="/about" element={<About />} />
+        </Routes>
+        <AboutIconLink />
+        <Card>
+          <NavLink to="/" activeClassName="active">
+            Home
+          </NavLink>
+          <NavLink to="/about" activeClassName="active">
+            About
+          </NavLink>
+        </Card>
       </div>
-    </>
+    </Router>
   );
 };
 
