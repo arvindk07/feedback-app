@@ -1,9 +1,14 @@
 import { Navigate, useNavigate } from "react-router-dom";
 
 const Post = () => {
-  const status = 400;
+  const status = 200;
 
-  const onCLick = () => {};
+  const naviagate = useNavigate();
+
+  const onCLick = () => {
+    console.log("Hello");
+    naviagate("/about");
+  };
 
   if (status === 400) {
     return <Navigate to="/notfound " />;
