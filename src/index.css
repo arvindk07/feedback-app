@@ -6,11 +6,6 @@
   box-sizing: border-box;
 }
 
-.active {
-  color: red;
-  background: black;
-}
-
 body {
   color: #fff;
   line-height: 1.6;

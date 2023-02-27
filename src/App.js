@@ -13,7 +13,8 @@ import {
   Route,
   NavLink,
 } from "react-router-dom";
-import Card from "./components/shared/Card";
+
+import Post from "./components/Post";
 
 const App = () => {
   const [feedback, setFeedback] = useState(FeedbackData);
@@ -48,16 +49,9 @@ const App = () => {
             }
           />
           <Route path="/about" element={<About />} />
+          <Route path="/post/:id/:name" element={<Post />} />
         </Routes>
         <AboutIconLink />
-        <Card>
-          <NavLink to="/" activeClassName="active">
-            Home
-          </NavLink>
-          <NavLink to="/about" activeClassName="active">
-            About
-          </NavLink>
-        </Card>
       </div>
     </Router>
   );
