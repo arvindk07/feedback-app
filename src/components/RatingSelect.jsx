@@ -2,18 +2,20 @@ import { useState } from "react";
 
 const RatingSelect = ({ select }) => {
   const [selected, setSelected] = useState(10);
+
   const handleChange = (e) => {
     setSelected(+e.currentTarget.value);
     select(+e.currentTarget.value);
   };
+
   return (
     <ul className="rating">
       <li>
         <input
-          id="num1"
-          value="1"
           type="radio"
+          id="num1"
           name="rating"
+          value="1"
           onChange={handleChange}
           checked={selected === 1}
         />
@@ -21,10 +23,10 @@ const RatingSelect = ({ select }) => {
       </li>
       <li>
         <input
-          id="num2"
-          value="2"
           type="radio"
+          id="num2"
           name="rating"
+          value="2"
           onChange={handleChange}
           checked={selected === 2}
         />
@@ -32,10 +34,10 @@ const RatingSelect = ({ select }) => {
       </li>
       <li>
         <input
-          id="num3"
-          value="3"
           type="radio"
+          id="num3"
           name="rating"
+          value="3"
           onChange={handleChange}
           checked={selected === 3}
         />
@@ -43,10 +45,10 @@ const RatingSelect = ({ select }) => {
       </li>
       <li>
         <input
-          id="num4"
-          value="4"
           type="radio"
+          id="num4"
           name="rating"
+          value="4"
           onChange={handleChange}
           checked={selected === 4}
         />
@@ -54,10 +56,10 @@ const RatingSelect = ({ select }) => {
       </li>
       <li>
         <input
-          id="num5"
-          value="5"
           type="radio"
+          id="num5"
           name="rating"
+          value="5"
           onChange={handleChange}
           checked={selected === 5}
         />
@@ -65,10 +67,10 @@ const RatingSelect = ({ select }) => {
       </li>
       <li>
         <input
-          id="num6"
-          value="6"
           type="radio"
+          id="num6"
           name="rating"
+          value="6"
           onChange={handleChange}
           checked={selected === 6}
         />
@@ -76,10 +78,10 @@ const RatingSelect = ({ select }) => {
       </li>
       <li>
         <input
-          id="num7"
-          value="7"
           type="radio"
+          id="num7"
           name="rating"
+          value="7"
           onChange={handleChange}
           checked={selected === 7}
         />
@@ -87,10 +89,10 @@ const RatingSelect = ({ select }) => {
       </li>
       <li>
         <input
-          id="num8"
-          value="8"
           type="radio"
+          id="num8"
           name="rating"
+          value="8"
           onChange={handleChange}
           checked={selected === 8}
         />
@@ -98,10 +100,10 @@ const RatingSelect = ({ select }) => {
       </li>
       <li>
         <input
-          id="num9"
-          value="9"
           type="radio"
+          id="num9"
           name="rating"
+          value="9"
           onChange={handleChange}
           checked={selected === 9}
         />
@@ -109,10 +111,10 @@ const RatingSelect = ({ select }) => {
       </li>
       <li>
         <input
-          id="num10"
-          value="10"
           type="radio"
+          id="num10"
           name="rating"
+          value="10"
           onChange={handleChange}
           checked={selected === 10}
         />

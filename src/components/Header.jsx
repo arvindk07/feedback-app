@@ -7,7 +7,9 @@ const Header = ({ text, bgColor, textColor }) => {
   };
   return (
     <header style={headerStyles}>
-      <h1>{text}</h1>
+      <div className="container">
+        <h1>{text}</h1>
+      </div>
     </header>
   );
 };
