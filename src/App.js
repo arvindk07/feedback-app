@@ -5,12 +5,7 @@ import FeedbackForm from "./components/FeedbackForm";
 
 import AboutIconLink from "./components/AboutIconLink";
 import About from "./pages/About";
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-  NavLink,
-} from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { FeedbackProvider } from "./context/FeedabackContext";
 
 const App = () => {
