@@ -47,8 +47,8 @@ const FeedbackForm = () => {
         updateFeedback(feedbackEdit.item.id, newFeedback);
       } else {
         addFeedback(newFeedback);
-        setText(" ");
       }
+      setText(" ");
     }
   };
 
