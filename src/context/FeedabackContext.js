@@ -10,8 +10,10 @@ export const FeedbackProvider = ({ children }) => {
       rating: 10,
     },
   ]);
+
+  console.log(feedback);
   return (
-    <FeedbackContext.Provider value={feedback}>
+    <FeedbackContext.Provider value={{ feedback }}>
       {children}
     </FeedbackContext.Provider>
   );
