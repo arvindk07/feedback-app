@@ -13,8 +13,7 @@ import {
   Route,
   NavLink,
 } from "react-router-dom";
-
-import Post from "./components/Post";
+import { FeedbackProvider } from "./context/FeedabackContext";
 
 const App = () => {
   const [feedback, setFeedback] = useState(FeedbackData);
@@ -31,29 +30,30 @@ const App = () => {
   };
 
   return (
-    <Router>
-      <Header />
-      <div className="container">
-        <Routes>
-          <Route
-            path="/"
-            element={
-              <>
-                <FeedbackForm handleAdd={addFeedback} />
-                <FeedbackStats feedback={feedback} />
-                <FeedbackList
-                  feedback={feedback}
-                  handleDelete={deleteFeedback}
-                />
-              </>
-            }
-          />
-          <Route path="/about" element={<About />} />
-          <Route path="/post/*" element={<Post />} />
-        </Routes>
-        <AboutIconLink />
-      </div>
-    </Router>
+    <FeedbackProvider>
+      <Router>
+        <Header />
+        <div className="container">
+          <Routes>
+            <Route
+              path="/"
+              element={
+                <>
+                  <FeedbackForm handleAdd={addFeedback} />
+                  <FeedbackStats feedback={feedback} />
+                  <FeedbackList
+                    feedback={feedback}
+                    handleDelete={deleteFeedback}
+                  />
+                </>
+              }
+            />
+            <Route path="/about" element={<About />} />
+          </Routes>
+          <AboutIconLink />
+        </div>
+      </Router>
+    </FeedbackProvider>
   );
 };
 
