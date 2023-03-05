@@ -4,7 +4,7 @@ import Button from "./shared/Button";
 import RatingSelect from "./RatingSelect";
 import FeedbackContext from "../context/FeedabackContext";
 
-const FeedbackForm = ({ handleAdd }) => {
+const FeedbackForm = () => {
   const [text, setText] = useState("");
   const [btnDisabled, setBtnDisabled] = useState(true);
   const [message, setMessage] = useState("");
